@@ -1,2 +1,173 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+.container
+  .content
+    .header
+    .row
+      .span12
+        = render 'layouts/messages'
+        %div#carousel{class: 'carousel slide'}
+          %div.carousel-inner
+            -(1..6).each do |index|
+              %div{class: "item#{' active' if index == 1}"}
+                =image_tag image_path("header#{index}.jpg")
+        .hello-welcome
+        .welcome-blurb
+          Thank you for visiting.  We hope that you'll find all the information you need about the wedding here.
+          %br
+          Please come back often, as we will be adding new details regularly!  We want to extend our thanks to
+          %br
+          all of our friends and family, and tell everyone how excited we are to celebrate with each of you.
+.container.oddblock
+  .divider
+  .content
+    .row-fluid
+      .span12
+        %h1 Directions
+    .row-fluid
+      .span6
+        .row-fluid
+          %h4 Coles Garden
+          1415 NE 63rd St, Oklahoma City, OK 73111
+          %br
+          %br
+          Adults only ceremony
+          %br
+          Reception and dinner to follow
+          %br
+          Formal attire requested
+        .row-fluid
+          %h4 Directions from I-44 West:
+          %p From I-44 West, take Kelley Avenue Exit.  Turn left on Kelley to N.E. 63rd Street.  Turn right at N.E. 63rd, turn left into Coles Garden at 1415 N.E. 63rd.
+        .row-fluid
+          %h4 Directions from I-44 East:
+          %p From I-44 East, take MLK Blvd.  Exit.  Continue West on N.E. 63rd Street, turn right into Coles Garden at 1415 N.E. 63rd Street.
+      .span6
+        =image_tag image_path('map.png'), class: 'map'
+.container
+  .divider
+  .content
+    .row-fluid
+      .span12
+        %h1 Places to visit
+    .row-fluid
+      .span4.flip
+        .flip-off
+          =image_tag image_path('national-cowboy-museum.png')
+        .flip-on
+          The National Cowboy & Western Heritage Museum is America’s premier institution of Western history, art and culture. Founded in 1955, the museum in Oklahoma City collects, preserves and exhibits an internationally renowned collection of Western art and artifacts while sponsoring dynamic educational programs and ground-breaking scholarly research to stimulate interest in the enduring legacy of our American West. More than 10 million visitors from around the world have sought out this unique museum to gain better understanding of the West: a region and a history that permeates our national culture.
+          %br
+          = link_to 'Visit Site &raquo;'.html_safe, 'http://www.nationalcowboymuseum.org/'
+      .span4.flip
+        .flip-off
+          =image_tag image_path('OK-national-memorial-museum.png')
+        .flip-on
+          The Outdoor Symbolic Memorial, spanning the downtown block where the April 19, 1995, terror bombing occurred, has been widely recognized as perhaps the most hopeful and unique memorial site in the United States. From a peaceful field of lighted chairs, across a shallow Reflecting Pool to the sturdy Survivor Tree, the Memorial’s outdoor sections create a sense of calm assurance.
+          = link_to 'Visit Site &raquo;'.html_safe, 'http://www.oklahomacitynationalmemorial.org/'
+      .span4.flip
+        .flip-off
+          =image_tag image_path('penn-square-mall.png')
+        .flip-on
+          Penn Square Mall is Oklahoma City's premiere fashion destination because of its excellent mix of over 140 specialty shops, and comfortable climate controlled atmosphere. Centrally located in the heart of Oklahoma City's popular Business and Tourism District, Penn Square offers the latest from women's fashion and sporting goods to dining options that include JCPenney, Dillard's, Macy's, Apple, Michael Kors, LUSH Cosmetics, Oakley, Cheesecake Factory and Elephant Bar Restaurant. Conveniently located with easy access off of Interstate-44 at the intersection of Pennsylvania and Northwest Expressway.
+          = link_to 'Visit Site &raquo;'.html_safe, 'http://www.simon.com/Mall/?id=811'
+    .row-fluid.grid-picture
+      .span4.flip
+        .flip-off
+          =image_tag image_path('myriad-botanical-gardens.png')
+        .flip-on
+          The Myriad Botanical Gardens is one of Oklahoma City’s most beloved public spaces, offering its visitors a 17 acre natural escape in the very heart of the metro known as downtown Oklahoma City.
+          %br
+          = link_to 'Visit Site &raquo;'.html_safe, 'http://www.myriadgardens.org/'
+      .span4.flip
+        .flip-off
+          =image_tag image_path('bricktown.png')
+        .flip-on
+          Bricktown, a once abandoned old warehouse district, received a much needed facelift with the passing of MAPS (Metropolitan Area Projects) in 1993 when Oklahoma City took on a massive public facility enhancement project. Now a vital part of the city, Bricktown is a much sought after destination for locals and tourists alike. The breathtaking canal lends itself to the picturesque look and a great variety of unique and exquisite restaurants, retailers and entertainment venues.
+          = link_to 'Visit Site &raquo;'.html_safe, 'http://www.bricktownokc.com/'
+      .span4.flip
+        .flip-off
+          =image_tag image_path('chicksaw-cultural-center.png')
+        .flip-on
+          The Chickasaw Cultural Center is located in Sulphur, Oklahoma near the Chickasaw National Recreation Area. Its 109-acre campus is home to historical museums with interactive exhibits on Chickasaw tribal history, traditional dancing, and Chickasaw language. Visitors can explore a traditional tribal village and a garden honoring members of the Chickasaw Nation Hall of Fame.
+          = link_to 'Visit Site &raquo;'.html_safe, 'http://www.chickasawculturalcenter.com/'
+    .row-fluid.grid-picture
+      .span4.flip
+        .flip-off
+          =image_tag image_path('sonic.png')
+        .flip-on
+          Sonic was first opened in the 1950's in Patricia's hometown, Shawnee, OK. There are currently over 200 Sonics in Oklahoma.
+          %br
+          = link_to 'Visit Site &raquo;'.html_safe, 'http://www.sonicdrivein.com/business/profile/backgrounder.jsp'
+      .span4.flip
+        .flip-off
+          =image_tag image_path('braums.png')
+        .flip-on
+          Braum’s Ice Cream and Dairy Stores…just the name conjures up visions of scrumptious ice cream, giant hamburgers, dairy fresh milk, fresh baked goods, even meats, fruits and vegetables.
+          = link_to 'Visit Site &raquo;'.html_safe, 'http://www.braums.com/'
+      .span4.flip
+        .flip-off
+          =image_tag image_path('cattlemens-steakhouse.png')
+        .flip-on
+          Cattlemen's Cafe opened its doors to hungry cowboys, ranchers, cattle haulers and the like in 1910. Since 1945, Cattlemen's Steakhouse has become a gathering place for all kinds of folks. Check the walls of the dining rooms and view the drawings of all the well-knowns who have sampled Cattlemen's fare.
+          = link_to 'Visit Site &raquo;'.html_safe, 'http://www.cattlemensrestaurant.com/history'
+.container.oddblock
+  .divider
+  .content
+    .row-fluid
+      .span12
+        %h1 Hotel and Travel
+    .row-fluid
+      .span2
+        =image_tag image_path('courtyard.png')
+      .span10
+        %p This is the hotel we chose as they will do a free shuttle to and from the Will Rogers, OKC Airport, and to and from the venue that Saturday so that no one has to worry about driving.
+        %p You can call <strong>1-800-321-2211</strong> and use the name Surin-Johnson Wedding to receive the special group rate.  Or you can use the link below if anyone prefers to make their reservation online.
+        %p
+          Book Double Queen at Courtyard Oklahoma City Airport for <strong>89.00 per night</strong>
+          %br
+          (Special rate available until: Fri Mar 07, 2014)
+
+        %h4 Closest Airport:
+        Will Rogers World Airport
+        %br
+        = link_to 'http://flyokc.com/'
+.container
+  .divider
+  .content
+    .row-fluid
+      .span12
+        = image_tag image_path('cats-header.jpg')
+    .row-fluid.grid-picture.cat
+      .span3
+        = image_tag image_path('strange.jpg')
+      .span9
+        %h3 Strange
+        %p Strange is a three year old male white and black squeaky kitty. He may be getting older, but his kitten cry and sweet temperament makes him the baby of the group. He and Alastair love cuddling on the sofa and he will “eep” until you pick him up or feed him! He sulks when we run the vacuum and is convinced that the sofa will protect him from thunderstorms. His favorite things include feet, food, playing fetch with his toy mouse, and playing chase with his kitty brothers.
+    .row-fluid.grid-picture.cat
+      .span3
+        = image_tag image_path('spin.jpg')
+      .span9
+        %h3 Spin
+        %p Spin is our oldest kitty, but only by a few weeks. He is a three year old gray and silver tabby male domestic. He’s the man of the house and demands pet at all of the worst times. First thing in the morning and in the middle of the night are his favorites! He loves his Alastair though and will cry at the office until he comes out to pet him on his favorite bookshelf. His favorite things are perching on his cat tree, staring, boxes, playing with springs and bottlecaps, and being pet by his humans.
+    .row-fluid.grid-picture.cat
+      .span3
+        = image_tag image_path('tau.jpg')
+      .span9
+        %h3 Tau
+        %p Tau is the newest addition to our kitty family. We adopted Tau when he was one year old, however, he is a littermate to Strange. He and his brother get along best and will nap together regularly. Tau is a big turtle shell male domestic weighing in at about 25 pounds! He is by far the sweetest kitty of the three, likely because he is the simplest! He gets scared sometimes when he’s lost in the apartment, and screams when he’s separated from his kitty brother, but he doesn’t mind baths! Just hurry up before he gets tired and wants to lay down. His favorite things are food, sleep, feather toys, and food.
+.container.oddblock
+  .divider
+  .content
+    .row-fluid
+      .span12
+        %h1 Registry
+    .row-fluid.registry
+      .span12
+        We want to express our gratitude and thanks to all of our friends and family
+        %br
+        Your presence at our wedding is gift enough, however, if you wish to send a gift, we have registered at the following locations.
+    .row-fluid.grid-picture
+      .span3.offset3
+        = link_to(image_tag(image_path('amazon-logo-small.gif')), 'http://www.amazon.com/gp/registry/registrym.html?ie=UTF8&id=CC8XB6S8E88U&type=wedding')
+      .span3
+        = link_to(image_tag(image_path('macys-logo-small.gif')), 'http://www1.macys.com/registry/wedding/guest/?registryId=2043212')
+.container
+  .content
