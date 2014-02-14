@@ -3,8 +3,9 @@
   %head
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
     %meta{:name => 'google-site-verification', :content => 'ZdyMia0nNvCzwU9-7p4MbZf_jb7gxdtB3G377UX9qys'}
-    %title= content_for?(:title) ? yield(:title) : "Tricia and Alastair's Wedding"
-    %meta{:content => content_for?(:description) ? yield(:description) : "The wedding website for Tricia and Alastair's Wedding", :name => "description"}
+    %title= content_for?(:title) ? yield(:title) : "Tricia and Alastair's Wedding - View wedding details for Alastair Surin and Patricia Johnson"
+    %meta{:content => content_for?(:description) ? yield(:description) : "The wedding website for Tricia and Alastair's Wedding - Alastair Surin and Patricia Johnson are getting married in Oklahoma City, OK on March the 29th 2014.  See their wedding details here.", :name => "description"}
+    %meta{:name => 'keywords', :content => 'alastair surin,patricia johnson,tricia johnson,wedding,married,march 29th 2014,registry,venue'
       = stylesheet_link_tag "application", :media => "all"
       = javascript_include_tag "application"
       = csrf_meta_tags
